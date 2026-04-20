@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onet Premium × Allegro Smart! – Akwizycja</title>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --yellow: #FFCC00;
+    --black: #191919;
+    --white: #FFFFFF;
+    --cream: #F4F3EE;
+    --light: #F4F3EE;
+    --gray: #888888;
+    --orange: #FF6020;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { min-width: 1280px; }
+  body, button, input { font-family: 'Fira Sans', Arial, sans-serif; }
+  body { background: var(--cream); color: var(--black); line-height: 1.5; }
+
+
+
+  /* SECTIONS */
+  section { min-height: 720px; padding: 90px 60px 60px; display: flex; flex-direction: column; justify-content: center; }
+
+  .tag {
+    display: inline-block; background: var(--yellow); color: var(--black);
+    font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 20px; margin-bottom: 40px;
+  }
+  .tag-allegro {
+    display: inline-block; background: var(--orange); color: var(--white);
+    font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 20px; margin-bottom: 12px;
+  }
+  .placement-label { font-size: 11px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; color: var(--gray); margin-bottom: 16px; }
+  .section-title { font-size: 48px; font-weight: 900; line-height: 1.1; margin-bottom: 20px; max-width: 800px; }
+  .section-title-sm { font-size: 36px; font-weight: 900; line-height: 1.1; margin-bottom: 12px; max-width: 800px; }
+  .section-lead { font-size: 17px; color: #444; max-width: 640px; line-height: 1.7; margin-bottom: 28px; }
+
+  /* HERO */
+  .slide-hero { background: var(--cream); padding: 40px 0 0 !important; min-height: 0 !important; border: none !important; outline: none !important; }
+  .hero-banner { width: 100%; display: flex; justify-content: center; align-items: center; padding: 0 0 32px; border: none; background: var(--cream); }
+  .hero-banner svg { width: 40%; max-width: 560px; height: auto; display: block; }
+
+  .hero-content { padding: 60px 60px 56px; }
+  .hero-headline { font-size: 72px; font-weight: 900; line-height: 1.05; margin-bottom: 6px; max-width: 900px; }
+  .hero-headline .yellow { color: var(--yellow); }
+  .hero-headline .orange { color: var(--orange); }
+  .hero-sub { font-size: 18px; color: #444; max-width: 640px; margin-top: 24px; margin-bottom: 48px; line-height: 1.65; }
+
+  .stats-row { display: flex; max-width: 700px; border: 1.5px solid #ddd; border-radius: 14px; overflow: hidden; }
+  .stat-box { flex: 1; padding: 24px 28px; border-right: 1.5px solid #ddd; }
+  .stat-box:last-child { border-right: none; }
+  .stat-num { font-size: 52px; font-weight: 900; display: block; line-height: 1; }
+  .stat-label { font-size: 13px; color: var(--gray); margin-top: 6px; line-height: 1.3; display: block; }
+
+  /* FLOW INTRO */
+  .slide-flow-intro { background: var(--black); color: var(--white); padding: 80px 60px; min-height: 0 !important; }
+  .flow-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--yellow); color: var(--black);
+    font-size: 11px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase;
+    padding: 7px 18px; border-radius: 20px; margin-bottom: 32px;
+  }
+  .flow-title { font-size: 52px; font-weight: 900; line-height: 1.05; margin-bottom: 20px; }
+  .flow-title .hl { color: var(--yellow); }
+  .flow-lead { font-size: 17px; color: rgba(255,255,255,.72); max-width: 680px; line-height: 1.7; margin-bottom: 40px; }
+
+  .flow-steps { display: flex; flex-direction: column; gap: 0; max-width: 640px; }
+  .flow-step { display: flex; gap: 18px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .flow-step:last-child { border-bottom: none; }
+  .flow-num {
+    min-width: 30px; height: 30px; background: var(--yellow); color: var(--black);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 900; flex-shrink: 0; margin-top: 2px;
+  }
+  .flow-step-text { font-size: 14px; color: rgba(255,255,255,.85); line-height: 1.6; }
+  .flow-step-text strong { color: var(--white); }
+
+  /* PLACEMENTS SECTION (WS + Modal) */
+  .slide-placement-intro { background: var(--cream); }
+  .ws-grid {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    gap: 0 16px;
+    align-items: start;
+    margin-top: 8px;
+  }
+  .ws-col { display: flex; flex-direction: column; gap: 20px; }
+  .ws-screen-wrap {
+    border-radius: 12px; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,.13); border: 1px solid rgba(0,0,0,.06); background: #fff;
+  }
+  .ws-screen-wrap img { width: 100%; height: auto; display: block; }
+  .ws-info {
+    background: var(--white); border-radius: 12px; padding: 16px 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,.06);
+  }
+  .ws-name { font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); margin-bottom: 4px; }
+  .ws-subtitle { font-size: 14px; font-weight: 900; color: var(--black); margin-bottom: 10px; }
+  .ws-facts { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+  .ws-facts li { font-size: 12px; color: #444; padding-left: 14px; position: relative; line-height: 1.45; }
+  .ws-facts li::before { content: '—'; position: absolute; left: 0; color: var(--yellow); font-weight: 900; }
+  .ws-albo { display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); padding-top: 120px; }
+
+  /* PLACEMENTS – annotated layout */
+  .slide-placements { background: var(--cream); padding: 90px 40px 60px; }
+
+  /* 2-col wide placement layout */
+  .placement-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 60px;
+  }
+  .placement-row.single { grid-template-columns: 1fr; max-width: 900px; }
+
+  .placement-screen-wrap {
+    border-radius: 12px; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,.13); border: 1px solid rgba(0,0,0,.06);
+  }
+  .placement-screen-wrap img { width: 100%; height: auto; display: block; }
+
+  .placement-info {
+    background: var(--white); border-radius: 12px; padding: 20px 22px;
+    box-shadow: 0 2px 16px rgba(0,0,0,.06);
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .placement-info .ws-name { font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); }
+  .placement-info .ws-subtitle { font-size: 16px; font-weight: 900; color: var(--black); margin-bottom: 6px; }
+  .placement-info p { font-size: 13px; color: #555; line-height: 1.65; }
+
+  /* BEFORE/AFTER section */
+  .slide-before-after {
+    background: var(--light);
+    min-height: 720px;
+    padding: 90px 50px 60px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .ba-toggle { display: flex; gap: 8px; margin-bottom: 28px; }
+  .ba-tab {
+    background: transparent; border: 1.5px solid #bbb; color: #666;
+    padding: 7px 20px; border-radius: 20px; font-size: 12px; font-weight: 700;
+    cursor: pointer; font-family: inherit; transition: all .2s;
+  }
+  .ba-tab-active { background: var(--black); border-color: var(--black); color: var(--white); }
+  .ba-hidden { display: none !important; }
+  .ba-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+  .ba-col { display: flex; flex-direction: column; gap: 10px; }
+  .ba-col-mobile { width: 200px; }
+  #ba-mobile.ba-pair { grid-template-columns: 200px 200px; gap: 60px; justify-content: center; }
+  .ba-label {
+    font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 20px; display: block; text-align: center;
+    white-space: normal; width: 100%; box-sizing: border-box;
+  }
+  .ba-label-before { background: #eee; color: #555; }
+  .ba-label-after { background: var(--yellow); color: var(--black); }
+  .ba-screen {
+    border-radius: 12px; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,.13); border: 1px solid rgba(0,0,0,.07); background: #fff;
+  }
+  .ba-screen-after {
+    box-shadow: 0 8px 40px rgba(255,210,0,.25), 0 2px 12px rgba(0,0,0,.1);
+    border: 2px solid var(--yellow); background: #fff;
+  }
+  .ba-screen img { width: 100%; display: block; height: auto; }
+
+  /* FLOW 2 intro */
+  .slide-flow2-intro { background: var(--black); color: var(--white); padding: 80px 60px; min-height: 0 !important; }
+
+  /* SIATKA section */
+  .slide-siatka { background: var(--light); padding: 90px 60px 60px; }
+  .siatka-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .siatka-grid.single { grid-template-columns: 1fr; max-width: 900px; }
+  .siatka-screen {
+    border-radius: 12px; overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,.12); border: 1px solid rgba(0,0,0,.06);
+  }
+  .siatka-screen img { width: 100%; height: auto; display: block; }
+  .siatka-info {
+    background: var(--white); border-radius: 12px; padding: 20px 22px;
+    box-shadow: 0 2px 16px rgba(0,0,0,.06);
+  }
+  .siatka-info .ws-name { font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); margin-bottom: 6px; }
+  .siatka-info .ws-subtitle { font-size: 16px; font-weight: 900; color: var(--black); margin-bottom: 10px; }
+  .siatka-info p { font-size: 13px; color: #555; line-height: 1.65; }
+
+  /* ALLEGRO SMART logo colors */
+  .allegro-text { color: var(--orange); font-weight: 900; }
+  .premium-dot::before { content: "●"; color: var(--yellow); margin-right: 4px; }
+
+  /* Divider between flows */
+  .section-divider {
+    border: none; border-top: 2px solid #ddd; margin: 0;
+  }
+
+</style>
+</head>
+<body>
+
+
+
+
+<!-- ====== SLIDE 1: HERO BANER ====== -->
+<!-- NEW: Hero banner replaced with premiumXallegrobanerglowny -->
+<section class="slide-hero">
+  <div class="hero-banner">
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="445"
+   height="35"
+   viewBox="0 0 445 35"
+   fill="none"
+   version="1.1"
+   id="svg12"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs12" />
+  <path
+     d="M 17,35 C 26.3889,35 34,27.165 34,17.5 34,7.835 26.3889,0 17,0 7.61122,0 0,7.835 0,17.5 0,27.165 7.61122,35 17,35 Z"
+     fill="#ffd200"
+     id="path1" />
+  <path
+     d="m 121.509,0 c -1.554,0.005 -2.804,1.3185 -2.796,2.9305 0,1.6169 1.266,2.9282 2.826,2.9282 1.559,0 2.825,-1.3113 2.825,-2.9282 C 124.364,1.315 123.1,0.0024 121.543,0 Z M 98.8677,8.0489 c -1.9531,0.0049 -3.8263,0.8489 -5.161,2.3461 V 8.5827 h -3.9158 v 17.653 H 94.27 V 14.8368 c 0.6636,-1.4821 2.0924,-2.4349 3.6701,-2.445 0.9195,-0.0499 1.8189,0.3092 2.4629,0.993 0.582,0.7136 0.88,1.6319 0.832,2.5702 v 10.2807 h 4.482 V 15.3904 c 0,-0.5539 -0.044,-1.1036 -0.136,-1.6476 0.766,-0.8584 1.836,-1.3459 2.963,-1.351 1.702,-0.1298 3.185,1.2033 3.31,2.97 0.015,0.1996 0.009,0.3935 -0.011,0.5932 v 10.2807 h 4.479 V 15.3904 c 0.087,-1.9912 -0.581,-3.9432 -1.866,-5.4304 h 0.005 C 113.249,8.7024 111.59,8.0199 109.878,8.0599 107.785,7.945 105.75,8.798 104.325,10.395 L 103.849,9.96 C 103.286,9.3611 102.612,8.8927 101.866,8.5783 101.039,8.229 100.154,8.0548 99.2593,8.0599 99.1286,8.0527 98.9979,8.0486 98.8677,8.0489 Z m 55.6723,0 c -1.953,0.0049 -3.824,0.8489 -5.159,2.3461 V 8.5827 h -3.922 v 17.653 h 4.479 V 14.8368 c 0.664,-1.4821 2.095,-2.4349 3.672,-2.445 0.92,-0.0499 1.818,0.3092 2.463,0.993 0.583,0.7136 0.88,1.6319 0.833,2.5702 v 10.2807 h 4.479 V 15.3904 c 0,-0.5539 -0.045,-1.1036 -0.136,-1.6476 0.766,-0.8584 1.838,-1.3459 2.963,-1.351 1.703,-0.1298 3.188,1.2033 3.312,2.97 0.014,0.1996 0.009,0.3935 -0.011,0.5932 v 10.2807 h 4.48 V 15.3904 c 0.086,-1.9912 -0.582,-3.9432 -1.866,-5.4304 h 0.004 C 168.919,8.7024 167.259,8.0199 165.546,8.0599 163.453,7.945 161.417,8.798 159.993,10.395 L 159.517,9.96 C 158.954,9.3611 158.283,8.8927 157.537,8.5783 156.709,8.229 155.822,8.0548 154.932,8.0599 154.801,8.0527 154.67,8.0486 154.54,8.0489 Z M 78.0075,8.0643 c -4.8641,0.1247 -8.7121,4.317 -8.5918,9.3625 0,5.4931 3.8368,9.3298 9.3288,9.3318 h 0.0042 c 2.8659,0.1332 5.6016,-1.2179 7.3085,-3.6071 l -3.6765,-2.122 c -0.9286,1.003 -2.2219,1.5474 -3.5642,1.5025 -2.4633,0 -4.1332,-1.1335 -4.7057,-3.1896 h 12.7448 l 0.0087,-0.044 c 0.1106,-0.6188 0.1694,-1.2428 0.1694,-1.8716 V 16.9787 C 86.9134,11.9332 82.8715,7.9395 78.0075,8.0643 Z M 48.1319,8.1192 C 46.1321,8.1106 44.2473,9.1 43.0598,10.7706 V 8.5629 H 39 V 32 h 4.3732 v -7.5063 c 1.1884,1.4323 2.9337,2.2307 4.7523,2.1858 2.1987,0 4.3026,-0.9441 5.8134,-2.601 3.3244,-3.7877 3.3244,-9.575 0,-13.3628 C 52.4291,9.0649 50.3333,8.1253 48.1361,8.1192 H 48.134 Z m 19.1914,0 C 65.4228,8.199 63.6898,9.2917 62.7467,11.0035 V 8.5629 h -4.1614 v 17.6772 h 4.3732 V 14.7072 c 0.7698,-1.4072 2.1938,-2.2946 3.7527,-2.3395 0.3272,0 0.654,0.028 0.9763,0.0879 h 0.0339 l 0.0148,-0.0286 c 0.5871,-1.3874 1.4202,-2.6445 2.4546,-3.7125 L 70.2374,8.664 70.1759,8.6442 H 70.1717 C 69.2528,8.3149 68.2903,8.1392 67.3233,8.1192 Z M 126.88,8.5431 v 10.8454 c -0.086,1.9962 0.581,3.941 1.865,5.4281 1.213,1.2576 2.874,1.9424 4.588,1.9024 2.092,0.1149 4.126,-0.7382 5.55,-2.3351 v 1.8167 h 3.916 V 8.5497 h -4.479 v 11.3924 c -0.665,1.4821 -2.091,2.4349 -3.67,2.4449 -0.192,0.015 -0.387,0.0112 -0.574,-0.0087 -1.698,-0.1997 -2.92,-1.7884 -2.728,-3.55 V 8.5541 l 0.007,-0.011 z m -7.487,0.0659 v 17.5916 h 4.291 V 8.609 Z m -41.3685,3.6708 c 0.1279,-0.0036 0.2576,-0.0021 0.3875,0.0066 2.0111,-0.0797 3.7683,1.3825 4.1339,3.4336 H 74.043 c 0.4013,-1.979 2.0628,-3.3869 3.9815,-3.4402 z m -30.6402,0.0813 c 2.4778,-0.0749 4.5467,1.942 4.6189,4.5121 0.0048,0.1796 0.0017,0.3541 -0.0127,0.5338 l 0.0042,-0.0044 c 0.2069,2.5601 -1.6256,4.8094 -4.0937,5.024 -0.1732,0.0149 -0.3435,0.0204 -0.5167,0.0154 -1.6502,-0.0199 -3.1687,-0.937 -3.9963,-2.4143 v -5.2502 c 0.8324,-1.4822 2.3461,-2.4014 3.9963,-2.4164 z"
+     fill="#000000"
+     id="path2" />
+  <path
+     d="m 205.25,16.75 h -7.5 v -7.5 c 0,-0.1989 -0.079,-0.3897 -0.22,-0.5303 C 197.39,8.579 197.199,8.5 197,8.5 c -0.199,0 -0.39,0.079 -0.53,0.2197 -0.141,0.1406 -0.22,0.3314 -0.22,0.5303 v 7.5 h -7.5 c -0.199,0 -0.39,0.079 -0.53,0.2197 -0.141,0.1406 -0.22,0.3314 -0.22,0.5303 0,0.1989 0.079,0.3897 0.22,0.5303 0.14,0.1407 0.331,0.2197 0.53,0.2197 h 7.5 v 7.5 c 0,0.1989 0.079,0.3897 0.22,0.5303 0.14,0.1407 0.331,0.2197 0.53,0.2197 0.199,0 0.39,-0.079 0.53,-0.2197 0.141,-0.1406 0.22,-0.3314 0.22,-0.5303 v -7.5 h 7.5 c 0.199,0 0.39,-0.079 0.53,-0.2197 0.141,-0.1406 0.22,-0.3314 0.22,-0.5303 0,-0.1989 -0.079,-0.3897 -0.22,-0.5303 -0.14,-0.1407 -0.331,-0.2197 -0.53,-0.2197 z"
+     fill="#424242"
+     id="path3" />
+  <path
+     d="m 301.178,19.317 c 0.651,1.8425 2.083,3.292 4.114,3.292 2.031,0 3.546,-1.4495 4.171,-3.292 0.191,-0.5818 0.341,-1.3219 0.341,-1.9956 0,-0.6431 -0.155,-1.4138 -0.341,-1.9752 -0.625,-1.8068 -2.15,-3.292 -4.171,-3.292 -2.021,0 -3.452,1.4699 -4.114,3.292 -0.212,0.5461 -0.305,1.3168 -0.305,1.9752 0,0.6584 0.093,1.4138 0.305,1.9956 z m -2.672,-7.1914 c 1.587,-2.1844 4.14,-3.3175 6.786,-3.3175 2.646,0 5.225,1.1331 6.879,3.3175 1.086,1.47 1.618,3.3839 1.618,5.1958 0,1.8119 -0.532,3.7258 -1.618,5.2519 -1.654,2.1487 -4.207,3.2563 -6.879,3.2563 -2.672,0 -5.199,-1.1076 -6.786,-3.2563 -1.122,-1.5414 -1.68,-3.3839 -1.68,-5.2519 -0.01,-1.8221 0.553,-3.7258 1.68,-5.1958 z m -12.022,3.5932 c 0,-2.4856 1.184,-3.9096 2.114,-4.8896 1.277,-1.2249 3.106,-2.0313 5.163,-2.0313 0.31,0 1.432,0.0357 1.964,0.2093 0.378,0.0561 0.471,0.2807 0.471,0.7706 v 2.0059 c 0,0.3981 -0.31,0.6175 -0.688,0.5461 -3.204,-0.6788 -5.168,0.7094 -5.168,3.6544 v 9.4422 c 0,0.2807 -0.248,0.4338 -0.532,0.4338 h -2.802 c -0.31,0 -0.532,-0.1531 -0.532,-0.4338 v -9.7127 z m -15.035,3.5931 c 0.589,1.8425 2.083,3.292 4.114,3.292 4.611,0 4.729,-4.6445 4.729,-5.2876 0,-0.6431 -0.129,-5.2519 -4.729,-5.2519 -2.021,0 -3.525,1.4699 -4.114,3.292 -0.191,0.5512 -0.341,1.3168 -0.341,1.9752 0,0.6584 0.155,1.3985 0.341,1.9854 m 0.936,13.3058 v -2.4856 c 0,-0.3981 0.31,-0.4899 0.723,-0.3981 0.719,0.0562 2.212,0.2093 3.272,0.1532 1.618,-0.1276 4.078,-0.6431 4.078,-3.4452 v -2.0313 c -1.406,0.8881 -3.106,1.4138 -4.884,1.4138 -2.647,0 -5.226,-1.1076 -6.823,-3.2563 -2.15,-2.9552 -2.15,-7.5283 0,-10.4579 1.582,-2.1844 4.171,-3.3124 6.823,-3.3124 2.651,0 5.261,1.1331 6.843,3.3124 1.121,1.4699 1.617,3.3482 1.617,5.1958 v 8.1152 c 0,1.1075 -0.129,2.3682 -0.47,3.4093 -0.47,1.4495 -1.37,2.6388 -2.708,3.3839 -1.835,1.0514 -4.362,1.1331 -8.037,0.7911 -0.284,0.0255 -0.439,-0.1633 -0.439,-0.3828 M 261.195,15.6524 c 0,-2.6744 -1.928,-3.5931 -3.582,-3.5931 -3.049,0 -4.041,2.3682 -4.041,3.5931 z m -11.551,-0.6635 c 0.723,-2.8275 2.894,-6.1757 7.969,-6.1757 6.942,0 7.815,6.3645 7.603,9.4422 -0.036,0.2807 -0.212,0.4644 -0.496,0.4644 h -11.205 c 0.191,2.1845 2.083,3.782 4.326,3.9709 2.248,0.1531 4.021,-0.4339 5.546,-1.3168 0.377,-0.2807 0.651,-0.0562 0.651,0.3981 v 2.1232 c 0,0.5257 -0.036,0.7094 -0.341,0.8625 -1.334,0.7707 -3.143,1.225 -5.887,1.1076 -2.683,-0.0562 -5.226,-1.1076 -6.786,-3.2563 -1.122,-1.5414 -1.68,-3.3839 -1.68,-5.2519 0,-0.8421 0.093,-1.6332 0.305,-2.3682 M 243.323,2.3823 c 0,-0.245 0.248,-0.49 0.496,-0.49 h 2.863 c 0.248,0 0.439,0.245 0.439,0.49 v 23.0543 c 0,0.2807 -0.191,0.4338 -0.439,0.4338 h -2.863 c -0.248,0 -0.496,-0.1531 -0.496,-0.4338 z m -6.631,0 c 0,-0.245 0.155,-0.49 0.439,-0.49 h 2.837 c 0.285,0 0.533,0.245 0.533,0.49 v 23.0543 c 0,0.2807 -0.248,0.4338 -0.533,0.4338 h -2.837 c -0.284,0 -0.439,-0.1531 -0.439,-0.4338 z m -13.857,18.3179 c 0,0.643 0.305,1.133 0.873,1.5975 0.553,0.3981 1.122,0.5818 1.747,0.5818 h 4.941 v -4.8538 h -3.948 c -2.957,0 -3.618,1.7507 -3.618,2.6745 M 219,20.6746 c 0,-5.0069 5.448,-5.6602 7.256,-5.6602 h 4.135 v -0.3726 c 0,-0.7145 -0.305,-1.8118 -1.369,-2.312 -1.489,-0.7707 -4.456,-0.5257 -6.942,1.0157 -0.305,0.1888 -0.687,0.1173 -0.718,-0.2808 l -0.155,-2.4294 c -0.01,-0.1276 0.036,-0.245 0.155,-0.3062 1.737,-1.0157 3.83,-1.5414 5.83,-1.5414 2,0 4.135,0.5818 5.261,1.7506 1.086,1.1331 1.582,2.8582 1.582,5.0784 v 9.8045 c 0,0.2808 -0.212,0.4339 -0.47,0.4339 h -8.368 c -1.866,0 -3.334,-0.3369 -4.388,-1.1688 C 219.625,23.7625 219,22.41 219,20.7155 v -0.046 z"
+     fill="#ff5900"
+     id="path4" />
+  <path
+     id="path5"
+     d="m 330.22461,6.419922 c -5.391,0 -8.27539,2.297637 -8.27539,6.023437 0,6.9209 10.80859,4.573022 10.80859,7.982422 0,1.3321 -1.38631,2.076172 -3.82031,2.076172 -2.032,0 -3.05923,-0.510103 -3.86523,-0.908203 -0.533,-0.2552 -0.97179,-0.480469 -1.55079,-0.480469 -1.101,0 -1.89257,0.782585 -1.89257,1.833985 0,2.4141 4.22314,3.009765 6.86914,3.009765 5.308,0 8.33765,-2.342772 8.34765,-5.951172 0,-6.9923 -10.86523,-4.190443 -10.86523,-8.089843 0,-1.2964 1.27778,-2.00586 3.67578,-2.00586 1.799,0 2.58884,0.409728 3.21484,0.736328 0.424,0.2093 0.7795,0.398438 1.3125,0.398438 1.09,0 1.88086,-0.762085 1.88086,-1.833984 0,-2.3835 -3.58184,-2.791016 -5.83984,-2.791016 z m 42.77344,0.0039 c -0.77,0 -1.54963,0.363091 -1.89063,1.087891 l -7.53125,15.888672 c -0.666,1.3882 0.52706,2.55664 1.66406,2.55664 h 0.0117 c 0.682,0 1.34211,-0.352125 1.66211,-1.015625 l 1.73828,-3.664062 h 8.4043 l 1.68945,3.572265 c 0.341,0.7094 1.03921,1.107422 1.78321,1.107422 1.338,0 2.45887,-1.367125 1.79687,-2.765625 L 374.8906,7.511713 c -0.34099,-0.7248 -1.12157,-1.087891 -1.89257,-1.087891 z m -31.5625,0.01563 c -1.37,0 -2.09375,0.959119 -2.09375,1.949219 v 15.61914 c 0,1.0871 0.87361,1.949219 1.97461,1.949219 1.101,0 1.97265,-0.862119 1.97265,-1.949219 V 13.759766 l 5.42774,7.796875 c 0.403,0.587 1.07468,0.878906 1.67968,0.878906 0.605,-0.0153 1.27669,-0.297006 1.67969,-0.878906 l 5.42774,-7.796875 v 10.248046 c 0,1.0871 0.87361,1.949219 1.97461,1.949219 1.101,0 1.97265,-0.862119 1.97265,-1.949219 V 8.388672 c 0,-0.9901 -0.72179,-1.949219 -2.09179,-1.949219 -0.956,0 -1.69066,0.4793 -2.22266,1.25 l -6.66797,9.6875 -6.73828,-9.6875 c -0.548,-0.786 -1.32292,-1.25 -2.29492,-1.250001 z m 44.94922,0.287109 c -1.101,0 -1.97461,0.862119 -1.97461,1.949219 v 15.337891 c 0,1.0871 0.87361,1.949219 1.97461,1.949219 1.101,0 1.97461,-0.862119 1.97461,-1.949219 v -4.59961 h 3.83984 l 4.48047,5.78711 c 0.388,0.5002 0.93626,0.761284 1.57226,0.771484 1.183,0.0255 1.98438,-0.770762 1.98438,-1.914062 0,-0.4542 -0.13006,-0.85201 -0.41406,-1.22461 l -3.09571,-3.992187 c 2.419,-0.9493 3.96875,-3.000091 3.96875,-5.837891 0,-3.8738 -2.67186,-6.257278 -7.25586,-6.267578 z m 17.18945,0.01953 c -1.064,0 -1.90039,0.827506 -1.90039,1.878906 0,1.0514 0.83639,1.876953 1.90039,1.876953 h 4.82226 0.0117 v 13.505859 c 0,1.0872 0.87361,1.949219 1.97461,1.949219 1.101,0 1.97266,-0.862018 1.97266,-1.949219 V 10.501953 h 4.82422 c 1.064,0 1.90039,-0.825553 1.90039,-1.876953 0,-1.0514 -0.83639,-1.878906 -1.90039,-1.878906 z m -15.21484,3.61914 h 4.70312 c 2.413,0 3.69141,0.979557 3.69141,2.847657 0,1.868 -1.27841,2.847656 -3.69141,2.847656 v 0.0098 h -4.70312 z m -15.52149,1.78125 2.74414,5.837891 h -0.006 -5.48242 z"
+     style="fill:#422678;fill-opacity:1" />
+  <path
+     d="m 435.33,17.5106 -4.564,-0.0357 -2.041,-11.0091 8.807,0.0562 z"
+     fill="#ffffff"
+     id="path10" />
+  <path
+     d="m 433.061,1.8057 c -6.621,0.0561 -11.95,5.3795 -11.939,11.9073 0,8.6052 11.939,19.4816 11.939,19.4816 C 433.748,32.577 445,22.3488 445,13.713 445.01,7.1852 439.681,1.8669 433.061,1.8057 Z m -0.073,24.3149 c -1.762,0 -3.194,-1.424 -3.178,-3.1644 0,-1.7405 1.442,-3.1543 3.204,-3.1389 1.763,0 3.194,1.424 3.179,3.1644 v 0.0255 c -0.011,1.7302 -1.442,3.1185 -3.205,3.1185 m 2.342,-8.6154 -4.564,-0.0357 -2.047,-11.0091 8.807,0.0561 -2.196,10.9836 z"
+     fill="#ff5c00"
+     id="path11" />
+  <path
+     d="m 432.988,26.1207 c -1.762,0 -3.194,-1.4239 -3.178,-3.1644 0,-1.7404 1.442,-3.1491 3.204,-3.1389 1.763,0 3.194,1.424 3.179,3.1645 v 0.0255 c -0.011,1.7251 -1.442,3.1184 -3.205,3.1184"
+     fill="#ffffff"
+     id="path12" />
+</svg>
+
+
+  </div>
+  <div class="hero-content">
+    <h1 class="hero-headline">
+      Onet Premium<br>
+      dla użytkowników<br>
+      <span class="orange">Allegro </span><span style="color:#422678">Smart!</span>
+    </h1>
+    <p class="hero-sub">Rozpoznajemy Smartowiczów w naszym ekosystemie i kierujemy do nich spersonalizowaną ofertę - 3 miesiące Onet Premium za 0 zł.<br>Smartowiczom, którzy skorzystali z oferty pokazujemy dedykowaną siatkę reklamową i komunikację na serwisie.</p>
+
+  </div>
+</section>
+
+
+<!-- ====== FLOW 1 INTRO ====== -->
+<!-- NEW SECTION: flow1-intro -->
+<section class="slide-flow-intro">
+  
+  <h2 class="flow-title">Komunikacja dla <span style="color:var(--orange)">Smartowicza</span><br>który nie ma jeszcze <span class="hl">Onet Premium</span></h2>
+  <p class="flow-lead">Allegro przekazuje przez Metarouter/API informację czy dany użytkownik ma aktywny Smart!. Rozpoznany Smartowicz widzi dedykowane placementy sprzedażowe na Stronie Głównej Onetu i detalach treści. Każdy z tych placementów prowadzi do jednego miejsca: dedykowanego Landing Page z ofertą 3 miesiące za 0 zł.</p>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-num">1</div>
+      <div class="flow-step-text">Allegro przekazuje przez <strong>Metarouter / API</strong> informację, czy user ma Smart!</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">2</div>
+      <div class="flow-step-text">User rozpoznany jako <strong>Smartowicz</strong> widzi dedykowane placementy sprzedażowe na SG Onet i detalach treści</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">3</div>
+      <div class="flow-step-text">Placementy prowadzą do <strong>dedykowanego LP</strong> ze specjalną ofertą dla Smartowiczów</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">4</div>
+      <div class="flow-step-text">Pod CTA na placementach zaszyty jest <strong>kod promocyjny</strong>, który automatycznie aplikuje się w checkout — proces maksymalnie prosty</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">5</div>
+      <div class="flow-step-text">User korzysta z oferty: <strong>3 miesiące za 0 zł</strong>, następnie płatność cykliczna</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== SLIDE 2: PLACEMENT 1–2 z 7: WELCOME SCREEN + MODAL ====== -->
+<!-- NEW: placement numbers updated to 1–2 z 7 -->
+<section class="slide-placement-intro" style="min-height:720px; padding:90px 60px 60px;">
+  <h2 class="section-title">Welcome Screen i Modal</h2>
+  <p class="section-lead">Pierwsze punkty kontaktu Smartowicza z komunikacją po wejściu na serwis.<br>Welcome Screen wyświetla się zanim user zobaczy stronę główną.<br>Modal pojawia się po 1 sekundzie po wejściu na stronę.</p>
+
+  <div class="ws-grid">
+    <!-- Welcome Screen -->
+    <div class="ws-col">
+      <div class="ws-screen-wrap">
+        <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="https://cdn.raspaid.pl/zasoby/Desktop-Modal.png" alt="Welcome Screen">
+      </div>
+      <div class="ws-info">
+        <div class="ws-subtitle">Welcome Screen</div>
+        <ul class="ws-facts">
+          <li>Pełnoekranowe wejście przed Stroną Główną — user widzi ofertę, zanim przejdzie do serwisu</li>
+          <li>Komunikat: <em>„Masz Allegro Smart!? Odbierz Onet Premium za 0 zł"</em></li>
+          <li>Automatyczne zamknięcie po 7 sek. — przycisk przejścia do serwisu widoczny od razu</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ws-albo">lub</div>
+
+    <!-- Modal -->
+    <div class="ws-col">
+      <div class="ws-screen-wrap">
+        <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="https://cdn.raspaid.pl/zasoby/Desktop-Modal%20(2).png" alt="Modal">
+      </div>
+      <div class="ws-info">
+        <div class="ws-subtitle">Modal akwizycyjny</div>
+        <ul class="ws-facts">
+          <li>Pojawia się po 1 sek. po wejściu na SG — user już w serwisie</li>
+          <li>Wyświetla się wtedy, gdy nie aktywny jest Welcome Screen. User nigdy nie dostaje obu tego samego dnia</li>
+          <li>Kontrolowany capping; jeden, spójny komunikat dla Smartowicza bez Onetu Premium</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== SLIDE 3: PLACEMENT 3–4 z 7: TOP BELKA + BANER ONBOARDINGOWY ====== -->
+<section class="slide-placements">
+  <h2 class="section-title">Top belka i baner sprzedażowy</h2>
+  <p class="section-lead">Stały punkt kontaktu w nawigacji serwisu. Top belka przykuwa uwagę przy każdym scrollu. Baner sprzedażowy zastępuje standardowy placement Premium wzmacniając komunikację oferty dla Smartowiczów!.</p>
+
+  <!-- Outer wrapper — position:relative so SVG can overlay everything -->
+  <div id="tbLayout" style="position:relative; display:grid; grid-template-columns:1fr 300px; gap:32px; align-items:stretch;">
+
+    <!-- SVG overlay spanning the whole grid -->
+    <svg id="tbSvg" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:10;overflow:visible;"></svg>
+
+    <!-- LEFT: desktop screenshot -->
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <div class="placement-screen-wrap" style="position:relative;">
+        <img id="tbDesktop" src="https://cdn.raspaid.pl/zasoby/Topdesktop0.png" alt="Top belka – desktop" style="width:100%; display:block;">
+      </div>
+    </div>
+
+    <!-- RIGHT: bloczki + mobilki -->
+    <div style="display:flex; flex-direction:column; justify-content:space-between;">
+
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <!-- Bloczek TOP BELKA -->
+        <div class="placement-info" id="tbBubble1">
+          <div class="ws-subtitle">Top belka</div>
+          <p>Sticky format pojawiający się w nagłówku serwisu dla rozpoznanych Smartowiczów. Zawiera logo Premium + Allegro Smart! oraz wezwanie do działania.</p>
+        </div>
+        <!-- Mobile top belka -->
+        <div style="position:relative;">
+          <img id="tbMobile" src="https://cdn.raspaid.pl/zasoby/Topmobile0.png" alt="Top belka – mobile" style="width:100%; height:auto; display:block; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,.18); border:1px solid rgba(0,0,0,.08);">
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div class="placement-info" id="tbBubble2">
+          <div class="ws-subtitle">Baner</div>
+          <p>Dla rozpoznanych Smartowiczów wyświetlamy dedykowany placement zawierający logotyp Premium × Allegro Smart! z CTA kierującym bezpośrednio do LP sprzedażowego.</p>
+        </div>
+        <div class="placement-screen-wrap">
+          <img src="https://cdn.raspaid.pl/zasoby/banermobileonboarding0.png" alt="Baner onboardingowy mobile">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- ====== SLIDE 4: PLACEMENT 5–6 z 7: BELKA DOLNA + BRAMKA SPRZEDAŻOWA ====== -->
+<!-- NEW SECTION: placements 5-6 belka dolna + bramka sprzedażowa (detal treści) -->
+<section class="slide-placements" style="background: var(--light);">
+  <h2 class="section-title">Belka dolna sticky i bramka sprzedażowa</h2>
+  <p class="section-lead">Na detalach artykułów Premium Smartowicz spotyka dwa dedykowane formaty: floatującą belkę dolną oraz bramkę sprzedażową.</p>
+
+  <!-- Placement 5: Belka dolna sticky -->
+  <div style="margin-bottom: 48px;">
+    <div class="placement-row" style="align-items:end;">
+      <div class="placement-screen-wrap">
+        <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="https://cdn.raspaid.pl/zasoby/belkadolnadesktop0.png" alt="Belka dolna sticky – desktop">
+      </div>
+      <div class="placement-info">
+        <div class="ws-subtitle">Belka dolna sticky</div>
+        <p>Pojawia się od razu po wejściu na detal artykułu Premium. Belka jest przyklejona do dołu ekranu i floatuje jak użytkownik scrolluje ekran. Belka znika w momencie kiedy w viewport pojawi się bramka sprzedażowa.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Placement 6: Bramka sprzedażowa -->
+  <div>
+    <div class="placement-row" style="align-items:end;">
+      <div class="placement-screen-wrap">
+        <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="https://cdn.raspaid.pl/zasoby/bramkasprzedazowadesktop0.png" alt="Bramka sprzedażowa – desktop">
+      </div>
+      <div class="placement-info">
+        <div class="ws-subtitle">Bramka sprzedażowa - Paywall</div>
+        <p>Bramka sprzedażowa floatująca — pojawia się po przescrollowaniu do wyznaczonego miejsca w artykule. Komunikat dedykowany Smartowiczom: <em>„Masz Allegro Smart!? Odbierz Onet Premium za 0 zł"</em>. Prowadzi bezpośrednio do dedykowanego LP.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== SLIDE 5: PLACEMENT 7 z 7: LANDING PAGE SPRZEDAŻOWY ====== -->
+<!-- NEW SECTION: placement 7 landing page -->
+<section class="slide-placements">
+  <h2 class="section-title">Landing Page sprzedażowy</h2>
+  <p class="section-lead">Wszystkie placementy prowadzą do jednego miejsca - dedykowanego LP z ofertą wyłącznie dla użytkowników Allegro Smart!.</p>
+
+  <div class="placement-row" style="align-items:center;">
+    <div class="placement-screen-wrap">
+      <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="https://cdn.raspaid.pl/zasoby/lpallegrodesktop0.png" alt="Landing Page Allegro – desktop">
+    </div>
+    <div class="placement-info">
+      <div class="ws-subtitle">Dedykowany Landing Page dla Smartowiczów</div>
+      <p>Strona zawiera spersonalizowaną ofertę (3 miesiące za 0 zł) i komunikację Premium × Allegro Smart!.<br>Kod promocyjny zaszyty jest pod przyciskiem CTA - zastosowanie w checkout jest automatyczne i nie wymaga żadnej akcji od użytkownika.</p>
+    </div>
+  </div>
+</section>
+
+
+<hr class="section-divider">
+
+
+<!-- ====== FLOW 2 INTRO ====== -->
+<!-- NEW SECTION: flow2-intro -->
+<section class="slide-flow-intro slide-flow2-intro">
+  
+  <h2 class="flow-title">Komunikacja po konwersji</h2>
+  <p class="flow-lead">Po tym, jak Smartowicz odebrał ofertę i stał się subskrybentem Onetu Premium, wchodzimy w nowy etap: utrzymanie skojarzenia z Allegro Smart! i personalizację doświadczenia. User powinien cały czas „czuć", że to benefit wynikający z jego subskrypcji Smart! - nie przypadkowy trial.</p>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-num">1</div>
+      <div class="flow-step-text"><strong>Widoczny branding Onet Premium × Smart!</strong> - utrzymanie skojarzenia, skąd pochodzi ta korzyść</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">2</div>
+      <div class="flow-step-text"><strong>Dedykowane placementy / siatka reklamowa</strong> Allegro na stronie głównej Onet i detalach treści</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">3</div>
+      <div class="flow-step-text"><strong>Personalizacja doświadczenia</strong> - dane z Allegro + RASP do lepszego dopasowania treści i reklam</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== SLIDE FLOW 2: SIATKA REKLAMOWA ====== -->
+<!-- NEW SECTION: siatka reklamowa flow 2 -->
+<section class="slide-siatka">
+  <h2 class="section-title">Dedykowana siatka reklamowa Allegro i branding</h2>
+  <p class="section-lead">Po konwersji na stronie głównej Onet i detalach treści prezentowana jest siatka reklamowa Allegro (lub partnerów) oraz branding Onet Premium × Smart!.</p>
+
+  <!-- Siatka SG Desktop -->
+  <div style="margin-bottom: 56px;">
+    <div class="siatka-grid">
+      <div class="siatka-screen">
+        <img src="siatkaallegrodekstop0.png" alt="Siatka reklamowa Allegro – SG desktop">
+      </div>
+      <div class="siatka-info">
+        <div class="ws-subtitle">Dedykowana siatka Allegro na Stronie Głównej</div>
+        <p>Subskrybenci, którzy skorzystali z promocji Smart! widzą na SG Onet dedykowaną (ograniczoną) siatkę reklamową Allegro lub partnerów Allegro zamiast standardowych reklam.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Siatka Detal Mobile -->
+  <div style="margin-bottom: 56px;">
+    <div class="siatka-grid">
+      <div class="siatka-screen">
+        <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="siatkaallegrodekstopdetal0_.png" alt="Siatka reklamowa Allegro – detal treści">
+      </div>
+      <div class="siatka-info">
+        <div class="ws-subtitle">Dedykowana siatka Allegro na detalach</div>
+        <p>Na detalach artykułów subskrybent widzi reklamy Allegro zamiast standardowych formatów.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Czytasz dzięki Allegro -->
+  <div>
+    <div class="siatka-grid">
+      <div class="siatka-screen">
+        <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="czytaszdziekiallegro0.png" alt="Czytasz dzięki Smart! Bonusom">
+      </div>
+      <div class="siatka-info">
+        <div class="ws-subtitle">Komunikacja w artykule</div>
+        <p>W treści artykułów pojawiają się dedykowane inserty „Czytasz ten artykuł dzięki Smart! Bonusom". To bezpośrednie wzmocnienie skojarzenia branding Premium × Smart! w trakcie konsumpcji treści.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<script>
+<script>
+
+// ---- TOP BELKA ARROWS ----
+function drawTbArrows() {{
+  const svg     = document.getElementById('tbSvg');
+  const layout  = document.getElementById('tbLayout');
+  const desktop = document.getElementById('tbDesktop');
+  const mobile  = document.getElementById('tbMobile');
+  const bubble  = document.getElementById('tbBubble1');
+  if (!svg || !layout || !desktop || !mobile || !bubble) return;
+
+  svg.innerHTML = '';
+  const lr = layout.getBoundingClientRect();
+  const dr = desktop.getBoundingClientRect();
+  const mr = mobile.getBoundingClientRect();
+  const br = bubble.getBoundingClientRect();
+
+  // Bubble exit point: left edge, vertical centre
+  const bx = br.left  - lr.left;
+  const by = br.top   - lr.top + br.height / 2;
+
+  // Target 1: top belka strip on desktop — left edge, ~2% from top of image
+  const t1x = dr.left - lr.left;
+  const t1y = dr.top  - lr.top + dr.height * 0.018;
+
+  // Target 2: top belka strip on mobile — left edge, ~3% from top
+  const t2x = mr.left - lr.left;
+  const t2y = mr.top  - lr.top + mr.height * 0.03;
+
+  [[bx, by, t1x, t1y], [bx, by, t2x, t2y]].forEach(([x1,y1,x2,y2]) => {{
+    // dashed line
+    const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('x1', x1); line.setAttribute('y1', y1);
+    line.setAttribute('x2', x2); line.setAttribute('y2', y2);
+    line.setAttribute('stroke','#FFCC00');
+    line.setAttribute('stroke-width','1.6');
+    line.setAttribute('stroke-dasharray','5 3');
+    line.setAttribute('opacity','0.85');
+    svg.appendChild(line);
+    // dot at target
+    const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    c.setAttribute('cx', x2); c.setAttribute('cy', y2); c.setAttribute('r','5');
+    c.setAttribute('fill','#FFCC00'); c.setAttribute('stroke','#191919'); c.setAttribute('stroke-width','1.5');
+    svg.appendChild(c);
+  }});
+}}
+
+window.addEventListener('load',   () => setTimeout(drawTbArrows, 120));
+window.addEventListener('resize', drawTbArrows);
+
+function switchBA(variant, btn) {
+  document.querySelectorAll('.slide-before-after .ba-toggle .ba-tab').forEach(t => t.classList.remove('ba-tab-active'));
+  btn.classList.add('ba-tab-active');
+  document.getElementById('ba-desktop').classList.toggle('ba-hidden', variant !== 'desktop');
+  document.getElementById('ba-mobile').classList.toggle('ba-hidden', variant !== 'mobile');
+}
+function switchBA2(variant, btn) {
+  const section = btn.closest('section');
+  section.querySelectorAll('.ba-tab').forEach(t => t.classList.remove('ba-tab-active'));
+  btn.classList.add('ba-tab-active');
+  document.getElementById('ba2-desktop').classList.toggle('ba-hidden', variant !== 'desktop');
+  document.getElementById('ba2-mobile').classList.toggle('ba-hidden', variant !== 'mobile');
+}
+</script>
+</body>
+</html>

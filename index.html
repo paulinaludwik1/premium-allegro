@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -23,7 +24,7 @@
 
 
   /* SECTIONS */
-  section { min-height: 720px; padding: 90px 60px 60px; display: flex; flex-direction: column; justify-content: center; }
+  section { min-height: 720px; padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
 
   .tag {
     display: inline-block; background: var(--yellow); color: var(--black);
@@ -36,8 +37,8 @@
     padding: 6px 14px; border-radius: 20px; margin-bottom: 12px;
   }
   .placement-label { font-size: 11px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; color: var(--gray); margin-bottom: 16px; }
-  .section-title { font-size: 48px; font-weight: 900; line-height: 1.1; margin-bottom: 20px; max-width: 800px; }
-  .section-title-sm { font-size: 36px; font-weight: 900; line-height: 1.1; margin-bottom: 12px; max-width: 800px; }
+  .section-title { font-size: 48px; font-weight: 700; line-height: 1.1; margin-bottom: 36px; max-width: 800px; }
+  .section-title-sm { font-size: 36px; font-weight: 700; line-height: 1.1; margin-bottom: 12px; max-width: 800px; }
   .section-lead { font-size: 17px; color: #444; max-width: 640px; line-height: 1.7; margin-bottom: 28px; }
 
   /* HERO */
@@ -46,15 +47,15 @@
   .hero-banner svg { width: 40%; max-width: 560px; height: auto; display: block; }
 
   .hero-content { padding: 60px 60px 56px; }
-  .hero-headline { font-size: 72px; font-weight: 900; line-height: 1.05; margin-bottom: 6px; max-width: 900px; }
+  .hero-headline { font-size: 72px; font-weight: 700; line-height: 1.05; margin-bottom: 6px; max-width: 900px; }
   .hero-headline .yellow { color: var(--yellow); }
   .hero-headline .orange { color: var(--orange); }
-  .hero-sub { font-size: 18px; color: #444; max-width: 640px; margin-top: 24px; margin-bottom: 48px; line-height: 1.65; }
+  .hero-sub { font-size: 18px; color: #444; max-width: 640px; margin-top: 48px; margin-bottom: 48px; line-height: 1.65; }
 
   .stats-row { display: flex; max-width: 700px; border: 1.5px solid #ddd; border-radius: 14px; overflow: hidden; }
   .stat-box { flex: 1; padding: 24px 28px; border-right: 1.5px solid #ddd; }
   .stat-box:last-child { border-right: none; }
-  .stat-num { font-size: 52px; font-weight: 900; display: block; line-height: 1; }
+  .stat-num { font-size: 52px; font-weight: 700; display: block; line-height: 1; }
   .stat-label { font-size: 13px; color: var(--gray); margin-top: 6px; line-height: 1.3; display: block; }
 
   /* FLOW INTRO */
@@ -62,10 +63,10 @@
   .flow-badge {
     display: inline-flex; align-items: center; gap: 8px;
     background: var(--yellow); color: var(--black);
-    font-size: 11px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase;
+    font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
     padding: 7px 18px; border-radius: 20px; margin-bottom: 32px;
   }
-  .flow-title { font-size: 52px; font-weight: 900; line-height: 1.05; margin-bottom: 20px; }
+  .flow-title { font-size: 52px; font-weight: 700; line-height: 1.05; margin-bottom: 36px; }
   .flow-title .hl { color: var(--yellow); }
   .flow-lead { font-size: 17px; color: rgba(255,255,255,.72); max-width: 680px; line-height: 1.7; margin-bottom: 40px; }
 
@@ -75,7 +76,7 @@
   .flow-num {
     min-width: 30px; height: 30px; background: var(--yellow); color: var(--black);
     border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    font-size: 13px; font-weight: 900; flex-shrink: 0; margin-top: 2px;
+    font-size: 13px; font-weight: 700; flex-shrink: 0; margin-top: 2px;
   }
   .flow-step-text { font-size: 14px; color: rgba(255,255,255,.85); line-height: 1.6; }
   .flow-step-text strong { color: var(--white); }
@@ -96,18 +97,20 @@
   }
   .ws-screen-wrap img { width: 100%; height: auto; display: block; }
   .ws-info {
-    background: var(--white); border-radius: 12px; padding: 16px 18px;
+    background: #fff; border-radius: 12px; padding: 16px 18px;
     box-shadow: 0 2px 16px rgba(0,0,0,.06);
+    border: 2px solid #ff5900;
+    margin-top: 48px;
   }
-  .ws-name { font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); margin-bottom: 4px; }
-  .ws-subtitle { font-size: 14px; font-weight: 900; color: var(--black); margin-bottom: 10px; }
+  .ws-name { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #ff5900; margin-bottom: 4px; }
+  .ws-subtitle { font-size: 14px; font-weight: 700; color: #ff5900; margin-bottom: 10px; }
   .ws-facts { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 5px; }
-  .ws-facts li { font-size: 12px; color: #444; padding-left: 14px; position: relative; line-height: 1.45; }
-  .ws-facts li::before { content: '—'; position: absolute; left: 0; color: var(--yellow); font-weight: 900; }
-  .ws-albo { display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); padding-top: 120px; }
+  .ws-facts li { font-size: 12px; color: #444; padding-left: 14px; position: relative; line-height: 1.45; font-weight: 400; }
+  .ws-facts li::before { content: '—'; position: absolute; left: 0; color: #ff5900; font-weight: 700; }
+  .ws-albo { display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); padding-top: 120px; }
 
   /* PLACEMENTS – annotated layout */
-  .slide-placements { background: var(--cream); padding: 90px 40px 60px; }
+  .slide-placements { background: var(--cream); padding: 80px 60px; }
 
   /* 2-col wide placement layout */
   .placement-row {
@@ -126,19 +129,21 @@
   .placement-screen-wrap img { width: 100%; height: auto; display: block; }
 
   .placement-info {
-    background: var(--white); border-radius: 12px; padding: 20px 22px;
+    background: #fff; border-radius: 12px; padding: 20px 22px;
     box-shadow: 0 2px 16px rgba(0,0,0,.06);
+    border: 2px solid #ff5900;
     display: flex; flex-direction: column; gap: 10px;
   }
-  .placement-info .ws-name { font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); }
-  .placement-info .ws-subtitle { font-size: 16px; font-weight: 900; color: var(--black); margin-bottom: 6px; }
-  .placement-info p { font-size: 13px; color: #555; line-height: 1.65; }
+  .placement-info .ws-name { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #ff5900; }
+  .placement-info .ws-subtitle { font-size: 16px; font-weight: 700; color: #ff5900; margin-bottom: 6px; }
+  .placement-info p { font-size: 13px; color: #444; line-height: 1.65; font-weight: 400; }
+  .placement-info em { color: #444; }
 
   /* BEFORE/AFTER section */
   .slide-before-after {
     background: var(--light);
     min-height: 720px;
-    padding: 90px 50px 60px;
+    padding: 80px 60px;
     display: flex; flex-direction: column; justify-content: center;
   }
   .ba-toggle { display: flex; gap: 8px; margin-bottom: 28px; }
@@ -174,7 +179,7 @@
   .slide-flow2-intro { background: var(--black); color: var(--white); padding: 80px 60px; min-height: 0 !important; }
 
   /* SIATKA section */
-  .slide-siatka { background: var(--light); padding: 90px 60px 60px; }
+  .slide-siatka { background: var(--light); padding: 80px 60px; }
   .siatka-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -188,15 +193,16 @@
   }
   .siatka-screen img { width: 100%; height: auto; display: block; }
   .siatka-info {
-    background: var(--white); border-radius: 12px; padding: 20px 22px;
+    background: #fff; border-radius: 12px; padding: 20px 22px;
     box-shadow: 0 2px 16px rgba(0,0,0,.06);
+    border: 2px solid #ff5900;
   }
-  .siatka-info .ws-name { font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); margin-bottom: 6px; }
-  .siatka-info .ws-subtitle { font-size: 16px; font-weight: 900; color: var(--black); margin-bottom: 10px; }
-  .siatka-info p { font-size: 13px; color: #555; line-height: 1.65; }
+  .siatka-info .ws-name { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #ff5900; margin-bottom: 6px; }
+  .siatka-info .ws-subtitle { font-size: 16px; font-weight: 700; color: #ff5900; margin-bottom: 10px; }
+  .siatka-info p { font-size: 13px; color: #444; line-height: 1.65; font-weight: 400; }
 
   /* ALLEGRO SMART logo colors */
-  .allegro-text { color: var(--orange); font-weight: 900; }
+  .allegro-text { color: var(--orange); font-weight: 700; }
   .premium-dot::before { content: "●"; color: var(--yellow); margin-right: 4px; }
 
   /* Divider between flows */
@@ -308,7 +314,7 @@
 
 <!-- ====== SLIDE 2: PLACEMENT 1–2 z 7: WELCOME SCREEN + MODAL ====== -->
 <!-- NEW: placement numbers updated to 1–2 z 7 -->
-<section class="slide-placement-intro" style="min-height:720px; padding:90px 60px 60px;">
+<section class="slide-placement-intro" style="min-height:720px; padding:80px 60px;">
   <h2 class="section-title">Welcome Screen i Modal</h2>
   <p class="section-lead">Pierwsze punkty kontaktu Smartowicza z komunikacją po wejściu na serwis.<br>Welcome Screen wyświetla się zanim user zobaczy stronę główną.<br>Modal pojawia się po 1 sekundzie po wejściu na stronę.</p>
 
@@ -316,7 +322,7 @@
     <!-- Welcome Screen -->
     <div class="ws-col">
       <div class="ws-screen-wrap">
-        <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="https://cdn.raspaid.pl/zasoby/Desktop-Modal.png" alt="Welcome Screen">
+        <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="https://cdn.raspaid.pl/zasoby/allegrowelcome.png" alt="Welcome Screen">
       </div>
       <div class="ws-info">
         <div class="ws-subtitle">Welcome Screen</div>
@@ -333,7 +339,7 @@
     <!-- Modal -->
     <div class="ws-col">
       <div class="ws-screen-wrap">
-        <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="https://cdn.raspaid.pl/zasoby/Desktop-Modal%20(2).png" alt="Modal">
+        <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="https://cdn.raspaid.pl/zasoby/allegromodal.png" alt="Modal">
       </div>
       <div class="ws-info">
         <div class="ws-subtitle">Modal akwizycyjny</div>
@@ -353,48 +359,46 @@
   <h2 class="section-title">Top belka i baner sprzedażowy</h2>
   <p class="section-lead">Stały punkt kontaktu w nawigacji serwisu. Top belka przykuwa uwagę przy każdym scrollu. Baner sprzedażowy zastępuje standardowy placement Premium wzmacniając komunikację oferty dla Smartowiczów!.</p>
 
-  <!-- Outer wrapper — position:relative so SVG can overlay everything -->
-  <div id="tbLayout" style="position:relative; display:grid; grid-template-columns:1fr 300px; gap:32px; align-items:stretch;">
-
-    <!-- SVG overlay spanning the whole grid -->
+  <!-- Outer wrapper with relative positioning so SVG can span both image rows -->
+  <div id="tbOuterLayout" style="position:relative;">
     <svg id="tbSvg" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:10;overflow:visible;"></svg>
 
-    <!-- LEFT: desktop screenshot -->
-    <div style="display:flex; flex-direction:column; gap:16px;">
-      <div class="placement-screen-wrap" style="position:relative;">
-        <img id="tbDesktop" src="https://cdn.raspaid.pl/zasoby/Topdesktop0.png" alt="Top belka – desktop" style="width:100%; display:block;">
+    <!-- ROW 1: Top belka images -->
+    <div style="display:grid; grid-template-columns:360px 1fr; gap:32px; align-items:start; margin-bottom:36px; padding-top:8px;">
+      <div>
+        <img id="tbMobile" src="https://cdn.raspaid.pl/zasoby/allegromobiletop.png" alt="Top belka mobile" style="width:100%; height:auto; display:block; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,.18); border:1px solid rgba(0,0,0,.08);">
+      </div>
+      <div class="placement-screen-wrap">
+        <img id="tbDesktop" src="https://cdn.raspaid.pl/zasoby/allegrotop.png" alt="Top belka desktop" style="width:100%; display:block;">
       </div>
     </div>
 
-    <!-- RIGHT: bloczki + mobilki -->
-    <div style="display:flex; flex-direction:column; justify-content:space-between;">
-
-      <div style="display:flex; flex-direction:column; gap:16px;">
-        <!-- Bloczek TOP BELKA -->
-        <div class="placement-info" id="tbBubble1">
-          <div class="ws-subtitle">Top belka</div>
-          <p>Sticky format pojawiający się w nagłówku serwisu dla rozpoznanych Smartowiczów. Zawiera logo Premium + Allegro Smart! oraz wezwanie do działania.</p>
-        </div>
-        <!-- Mobile top belka -->
-        <div style="position:relative;">
-          <img id="tbMobile" src="https://cdn.raspaid.pl/zasoby/Topmobile0.png" alt="Top belka – mobile" style="width:100%; height:auto; display:block; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,.18); border:1px solid rgba(0,0,0,.08);">
-        </div>
-      </div>
-
-      <div style="display:flex; flex-direction:column; gap:16px;">
-        <div class="placement-info" id="tbBubble2">
-          <div class="ws-subtitle">Baner</div>
-          <p>Dla rozpoznanych Smartowiczów wyświetlamy dedykowany placement zawierający logotyp Premium × Allegro Smart! z CTA kierującym bezpośrednio do LP sprzedażowego.</p>
-        </div>
-        <div class="placement-screen-wrap">
-          <img src="https://cdn.raspaid.pl/zasoby/banermobileonboarding0.png" alt="Baner onboardingowy mobile">
-        </div>
-      </div>
-
+    <!-- Description 1 full width -->
+    <div class="placement-info" id="tbBubble1" style="width:100%; margin-top:48px; margin-bottom:72px;">
+      <div class="ws-subtitle">Top belka</div>
+      <p>Sticky format pojawiający się w nagłówku serwisu dla rozpoznanych Smartowiczów. Zawiera logo Premium + Allegro Smart! oraz wezwanie do działania.</p>
     </div>
-  </div>
+
+    <!-- ROW 2: Baner images -->
+    <div style="display:grid; grid-template-columns:360px 1fr; gap:32px; align-items:start; margin-bottom:36px; padding-top:8px;">
+      <div>
+        <img id="obMobile" src="https://cdn.raspaid.pl/zasoby/allegroundertop.png" alt="Baner onboardingowy mobile" style="width:100%; height:auto; display:block; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,.18); border:1px solid rgba(0,0,0,.08);">
+      </div>
+      <div class="placement-screen-wrap">
+        <img id="obDesktop" src="https://cdn.raspaid.pl/zasoby/allegrounderonb.png" alt="Baner onboardingowy desktop" style="width:100%; display:block;">
+      </div>
+    </div>
+
+    <!-- Description 2 full width -->
+    <div class="placement-info" id="obBubble1" style="width:100%; margin-top:48px;">
+      <div class="ws-subtitle">Baner</div>
+      <p>Dla rozpoznanych Smartowiczów wyświetlamy dedykowany placement zawierający logotyp Premium × Allegro Smart! z CTA kierującym bezpośrednio do LP sprzedażowego.</p>
+    </div>
+
+  </div><!-- /tbOuterLayout -->
 
 </section>
+
 
 <!-- ====== SLIDE 4: PLACEMENT 5–6 z 7: BELKA DOLNA + BRAMKA SPRZEDAŻOWA ====== -->
 <!-- NEW SECTION: placements 5-6 belka dolna + bramka sprzedażowa (detal treści) -->
@@ -402,45 +406,51 @@
   <h2 class="section-title">Belka dolna sticky i bramka sprzedażowa</h2>
   <p class="section-lead">Na detalach artykułów Premium Smartowicz spotyka dwa dedykowane formaty: floatującą belkę dolną oraz bramkę sprzedażową.</p>
 
-  <!-- Placement 5: Belka dolna sticky -->
-  <div style="margin-bottom: 48px;">
-    <div class="placement-row" style="align-items:end;">
-      <div class="placement-screen-wrap">
-        <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="https://cdn.raspaid.pl/zasoby/belkadolnadesktop0.png" alt="Belka dolna sticky – desktop">
-      </div>
-      <div class="placement-info">
-        <div class="ws-subtitle">Belka dolna sticky</div>
-        <p>Pojawia się od razu po wejściu na detal artykułu Premium. Belka jest przyklejona do dołu ekranu i floatuje jak użytkownik scrolluje ekran. Belka znika w momencie kiedy w viewport pojawi się bramka sprzedażowa.</p>
-      </div>
-    </div>
-  </div>
+  <div id="bdOuterLayout" style="position:relative;">
+    <svg id="bdSvg" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:10;overflow:visible;"></svg>
 
-  <!-- Placement 6: Bramka sprzedażowa -->
-  <div>
-    <div class="placement-row" style="align-items:end;">
-      <div class="placement-screen-wrap">
-        <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="https://cdn.raspaid.pl/zasoby/bramkasprzedazowadesktop0.png" alt="Bramka sprzedażowa – desktop">
+    <!-- ROW 1: Belka dolna images -->
+    <div style="display:grid; grid-template-columns:360px 1fr; gap:32px; align-items:start; margin-bottom:36px; padding-top:8px;">
+      <div>
+        <img id="bdMobile1" src="https://cdn.raspaid.pl/zasoby/allegrobelkadolnamobile.png" alt="Belka dolna mobile" style="width:100%; height:auto; display:block; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,.18); border:1px solid rgba(0,0,0,.08);">
       </div>
-      <div class="placement-info">
-        <div class="ws-subtitle">Bramka sprzedażowa - Paywall</div>
-        <p>Bramka sprzedażowa floatująca — pojawia się po przescrollowaniu do wyznaczonego miejsca w artykule. Komunikat dedykowany Smartowiczom: <em>„Masz Allegro Smart!? Odbierz Onet Premium za 0 zł"</em>. Prowadzi bezpośrednio do dedykowanego LP.</p>
+      <div class="placement-screen-wrap">
+        <img id="bdDesktop1" src="https://cdn.raspaid.pl/zasoby/allegrobelkadolnadesktop.png" alt="Belka dolna desktop" style="width:100%; display:block;">
       </div>
     </div>
+    <div class="placement-info" id="bdBubble1" style="width:100%; margin-top:48px; margin-bottom:72px;">
+      <div class="ws-subtitle">Belka dolna sticky</div>
+      <p>Pojawia się od razu po wejściu na detal artykułu Premium. Belka jest przyklejona do dołu ekranu i floatuje jak użytkownik scrolluje ekran. Belka znika w momencie kiedy w viewport pojawi się bramka sprzedażowa.</p>
+    </div>
+
+    <!-- ROW 2: Bramka images -->
+    <div style="display:grid; grid-template-columns:360px 1fr; gap:32px; align-items:start; margin-bottom:36px; padding-top:8px;">
+      <div>
+        <img id="bdMobile2" src="https://cdn.raspaid.pl/zasoby/allegrobramkamobile.png" alt="Bramka mobile" style="width:100%; height:auto; display:block; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,.18); border:1px solid rgba(0,0,0,.08);">
+      </div>
+      <div class="placement-screen-wrap">
+        <img id="bdDesktop2" src="https://cdn.raspaid.pl/zasoby/allegrobramkadesktop.png" alt="Bramka desktop" style="width:100%; display:block;">
+      </div>
+    </div>
+    <div class="placement-info" id="bdBubble2" style="width:100%; margin-top:48px; margin-bottom:72px;">
+      <div class="ws-subtitle">Bramka sprzedażowa – Paywall</div>
+      <p>Bramka sprzedażowa floatująca — pojawia się po przescrollowaniu do wyznaczonego miejsca w artykule. Komunikat dedykowany Smartowiczom: <em>„Masz Allegro Smart!? Odbierz Onet Premium za 0 zł"</em>. Prowadzi bezpośrednio do dedykowanego LP.</p>
+    </div>
+
   </div>
 </section>
 
 
 <!-- ====== SLIDE 5: PLACEMENT 7 z 7: LANDING PAGE SPRZEDAŻOWY ====== -->
-<!-- NEW SECTION: placement 7 landing page -->
-<section class="slide-placements">
+<section class="slide-placements" style="padding-top:0px;">
   <h2 class="section-title">Landing Page sprzedażowy</h2>
   <p class="section-lead">Wszystkie placementy prowadzą do jednego miejsca - dedykowanego LP z ofertą wyłącznie dla użytkowników Allegro Smart!.</p>
 
-  <div class="placement-row" style="align-items:center;">
-    <div class="placement-screen-wrap">
-      <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="https://cdn.raspaid.pl/zasoby/lpallegrodesktop0.png" alt="Landing Page Allegro – desktop">
+  <div style="display:flex; flex-direction:column; align-items:center; gap:48px;">
+    <div class="placement-screen-wrap" style="width:80%;">
+      <img src="https://cdn.raspaid.pl/zasoby/allegroLPdesktop.png" alt="Landing Page Allegro – desktop" style="width:100%; display:block;">
     </div>
-    <div class="placement-info">
+    <div class="placement-info" style="width:80%;">
       <div class="ws-subtitle">Dedykowany Landing Page dla Smartowiczów</div>
       <p>Strona zawiera spersonalizowaną ofertę (3 miesiące za 0 zł) i komunikację Premium × Allegro Smart!.<br>Kod promocyjny zaszyty jest pod przyciskiem CTA - zastosowanie w checkout jest automatyczne i nie wymaga żadnej akcji od użytkownika.</p>
     </div>
@@ -477,45 +487,61 @@
 <!-- ====== SLIDE FLOW 2: SIATKA REKLAMOWA ====== -->
 <!-- NEW SECTION: siatka reklamowa flow 2 -->
 <section class="slide-siatka">
-  <h2 class="section-title">Dedykowana siatka reklamowa Allegro i branding</h2>
-  <p class="section-lead">Po konwersji na stronie głównej Onet i detalach treści prezentowana jest siatka reklamowa Allegro (lub partnerów) oraz branding Onet Premium × Smart!.</p>
+  <h2 class="section-title">Dedykowana siatka reklamowa i branding</h2>
+  <p class="section-lead">Po konwersji strona główna Onet i wybrane serwisy w ekosystemie RASP pokazują dedykowaną siatkę reklamową Allegro (lub partnerów) oraz branding Onet Premium × Smart!.</p>
 
   <!-- Siatka SG Desktop -->
-  <div style="margin-bottom: 56px;">
-    <div class="siatka-grid">
+  <div id="sgOuterLayout" style="position:relative; margin-bottom: 80px;">
+    <svg id="sgSvg" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:10;overflow:visible;"></svg>
+    <div style="display:grid; grid-template-columns:360px 1fr; gap:32px; align-items:start; margin-bottom:36px; padding-top:8px;">
+      <div>
+        <img id="sgMobile" src="https://cdn.raspaid.pl/zasoby/allegrob2bmobile.png" alt="Siatka reklamowa Allegro – SG mobile" style="width:100%; height:auto; display:block; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,.18); border:1px solid rgba(0,0,0,.08);">
+      </div>
       <div class="siatka-screen">
-        <img src="siatkaallegrodekstop0.png" alt="Siatka reklamowa Allegro – SG desktop">
+        <img id="sgDesktop" src="https://cdn.raspaid.pl/zasoby/allegrob2bdesktop.png" alt="Siatka reklamowa Allegro – SG desktop" style="width:100%; display:block;">
       </div>
-      <div class="siatka-info">
-        <div class="ws-subtitle">Dedykowana siatka Allegro na Stronie Głównej</div>
-        <p>Subskrybenci, którzy skorzystali z promocji Smart! widzą na SG Onet dedykowaną (ograniczoną) siatkę reklamową Allegro lub partnerów Allegro zamiast standardowych reklam.</p>
-      </div>
+    </div>
+    <div class="siatka-info" id="sgBubble" style="width:100%; margin-top:48px;">
+      <div class="ws-name">Siatka reklamowa – SG Onet</div>
+      <div class="ws-subtitle">Dedykowana siatka Allegro na Stronie Głównej</div>
+      <p>Subskrybenci, którzy skorzystali z promocji Smart!, widzą na SG Onet dedykowaną siatkę reklamową Allegro lub partnerów Allegro — zamiast standardowych reklam. Utrzymuje skojarzenie benefitu z subskrypcją Smart!.</p>
     </div>
   </div>
 
-  <!-- Siatka Detal Mobile -->
-  <div style="margin-bottom: 56px;">
-    <div class="siatka-grid">
+  <!-- Siatka Detal -->
+  <div id="dtOuterLayout" style="position:relative; margin-bottom: 80px;">
+    <svg id="dtSvg" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:10;overflow:visible;"></svg>
+    <div style="display:grid; grid-template-columns:360px 1fr; gap:32px; align-items:start; margin-bottom:36px; padding-top:8px;">
+      <div>
+        <img id="dtMobile" src="https://cdn.raspaid.pl/zasoby/allegrob2bmobiledetal.png" alt="Siatka reklamowa Allegro – detal mobile" style="width:100%; height:auto; display:block; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,.18); border:1px solid rgba(0,0,0,.08);">
+      </div>
       <div class="siatka-screen">
-        <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="siatkaallegrodekstopdetal0_.png" alt="Siatka reklamowa Allegro – detal treści">
+        <img id="dtDesktop" src="https://cdn.raspaid.pl/zasoby/allegrob2bdesktopdetal.png" alt="Siatka reklamowa Allegro – detal treści" style="width:100%; display:block;">
       </div>
-      <div class="siatka-info">
-        <div class="ws-subtitle">Dedykowana siatka Allegro na detalach</div>
-        <p>Na detalach artykułów subskrybent widzi reklamy Allegro zamiast standardowych formatów.</p>
-      </div>
+    </div>
+    <div class="siatka-info" id="dtBubble" style="width:100%; margin-top:48px;">
+      <div class="ws-name">Siatka reklamowa – Detal treści</div>
+      <div class="ws-subtitle">Dedykowana siatka Allegro na detalach</div>
+      <p>Na detalach artykułów subskrybent widzi reklamy Allegro zamiast standardowych formatów. Kontekst reklamowy wzmacnia wartość postrzeganą subskrypcji — user wie, że jego Smart! pracuje też poza Allegro.</p>
     </div>
   </div>
 
   <!-- Czytasz dzięki Allegro -->
-  <div>
-    <div class="siatka-grid">
+  <div id="czOuterLayout" style="position:relative;">
+    <svg id="czSvg" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:10;overflow:visible;"></svg>
+
+    <div style="display:grid; grid-template-columns:360px 1fr; gap:32px; align-items:start; margin-bottom:36px; padding-top:8px;">
+      <div>
+        <img id="czMobile" src="https://cdn.raspaid.pl/zasoby/allegroczytaszmobile.png" alt="Czytasz dzięki mobile" style="width:100%; height:auto; display:block; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,.18); border:1px solid rgba(0,0,0,.08);">
+      </div>
       <div class="siatka-screen">
-        <img style="display:block;border:none!important;outline:none!important;box-shadow:none!important;" src="czytaszdziekiallegro0.png" alt="Czytasz dzięki Smart! Bonusom">
+        <img id="czDesktop" src="https://cdn.raspaid.pl/zasoby/allegroczytaszdesktop.png" alt="Czytasz dzięki desktop" style="width:100%; display:block;">
       </div>
-      <div class="siatka-info">
-        <div class="ws-subtitle">Komunikacja w artykule</div>
-        <p>W treści artykułów pojawiają się dedykowane inserty „Czytasz ten artykuł dzięki Smart! Bonusom". To bezpośrednie wzmocnienie skojarzenia branding Premium × Smart! w trakcie konsumpcji treści.</p>
-      </div>
+    </div>
+    <div class="siatka-info" id="czBubble" style="width:100%; margin-top:48px;">
+      <div class="ws-name">Komunikacja w artykule</div>
+      <div class="ws-subtitle">„Czytasz ten artykuł dzięki Smart! Bonusom"</div>
+      <p>W treści artykułów pojawiają się dedykowane inserty przypominające użytkownikowi, że czyta dzięki Allegro Smart!. To bezpośrednie wzmocnienie skojarzenia branding Premium × Smart! w trakcie konsumpcji treści.</p>
     </div>
   </div>
 
@@ -523,55 +549,339 @@
 
 
 <script>
-<script>
 
-// ---- TOP BELKA ARROWS ----
-function drawTbArrows() {{
-  const svg     = document.getElementById('tbSvg');
-  const layout  = document.getElementById('tbLayout');
-  const desktop = document.getElementById('tbDesktop');
-  const mobile  = document.getElementById('tbMobile');
-  const bubble  = document.getElementById('tbBubble1');
-  if (!svg || !layout || !desktop || !mobile || !bubble) return;
+// ---- ARROWS for Siatka SG + Detal sections ----
+function drawSiatkaArrows(svgId, layoutId, mobileId, desktopId, bubbleId, mPctX, mPctY, dPctX, dPctY) {
+  const svg    = document.getElementById(svgId);
+  const layout = document.getElementById(layoutId);
+  const mobile = document.getElementById(mobileId);
+  const desktop= document.getElementById(desktopId);
+  const bubble = document.getElementById(bubbleId);
+  if (!svg || !layout || !mobile || !desktop || !bubble) return;
 
   svg.innerHTML = '';
+  const defs = document.createElementNS('http://www.w3.org/2000/svg','defs');
+  defs.innerHTML = `<marker id="arrow_${svgId}" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+    <path d="M0,0 L0,8 L8,4 z" fill="#ff5900"/>
+  </marker>`;
+  svg.appendChild(defs);
+
   const lr = layout.getBoundingClientRect();
-  const dr = desktop.getBoundingClientRect();
-  const mr = mobile.getBoundingClientRect();
-  const br = bubble.getBoundingClientRect();
-
-  // Bubble exit point: left edge, vertical centre
-  const bx = br.left  - lr.left;
-  const by = br.top   - lr.top + br.height / 2;
-
-  // Target 1: top belka strip on desktop — left edge, ~2% from top of image
-  const t1x = dr.left - lr.left;
-  const t1y = dr.top  - lr.top + dr.height * 0.018;
-
-  // Target 2: top belka strip on mobile — left edge, ~3% from top
-  const t2x = mr.left - lr.left;
-  const t2y = mr.top  - lr.top + mr.height * 0.03;
-
-  [[bx, by, t1x, t1y], [bx, by, t2x, t2y]].forEach(([x1,y1,x2,y2]) => {{
-    // dashed line
+  function pos(el) {
+    const r = el.getBoundingClientRect();
+    return { left: r.left - lr.left, top: r.top - lr.top, width: r.width, height: r.height };
+  }
+  function drawArrow(x1, y1, x2, y2) {
     const line = document.createElementNS('http://www.w3.org/2000/svg','line');
     line.setAttribute('x1', x1); line.setAttribute('y1', y1);
     line.setAttribute('x2', x2); line.setAttribute('y2', y2);
-    line.setAttribute('stroke','#FFCC00');
-    line.setAttribute('stroke-width','1.6');
-    line.setAttribute('stroke-dasharray','5 3');
-    line.setAttribute('opacity','0.85');
+    line.setAttribute('stroke','#ff5900');
+    line.setAttribute('stroke-width','2');
+    line.setAttribute('stroke-dasharray','6 3');
+    line.setAttribute('marker-end',`url(#arrow_${svgId})`);
     svg.appendChild(line);
-    // dot at target
-    const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
-    c.setAttribute('cx', x2); c.setAttribute('cy', y2); c.setAttribute('r','5');
-    c.setAttribute('fill','#FFCC00'); c.setAttribute('stroke','#191919'); c.setAttribute('stroke-width','1.5');
-    svg.appendChild(c);
-  }});
-}}
+  }
+
+  const m = pos(mobile), d = pos(desktop), b = pos(bubble);
+  const mDotX = m.left + m.width  * mPctX;
+  const mDotY = m.top  + m.height * mPctY;
+  const dDotX = d.left + d.width  * dPctX;
+  const dDotY = d.top  + d.height * dPctY;
+  drawArrow(mDotX, b.top, mDotX, mDotY - 8);
+  drawArrow(dDotX, b.top, dDotX, dDotY - 8);
+}
+
+function drawAllSiatkaArrows() {
+  // ---- SG: 3 strzałki ----
+  (function() {
+    const svg    = document.getElementById('sgSvg');
+    const layout = document.getElementById('sgOuterLayout');
+    const desktop= document.getElementById('sgDesktop');
+    const bubble = document.getElementById('sgBubble');
+    if (!svg || !layout || !desktop || !bubble) return;
+
+    svg.innerHTML = '';
+    const defs = document.createElementNS('http://www.w3.org/2000/svg','defs');
+    defs.innerHTML = `<marker id="arrow_sgSvg" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#ff5900"/>
+    </marker>`;
+    svg.appendChild(defs);
+
+    const lr = layout.getBoundingClientRect();
+    function pos(el) {
+      const r = el.getBoundingClientRect();
+      return { left: r.left-lr.left, top: r.top-lr.top, width: r.width, height: r.height };
+    }
+    function drawArrow(x1, y1, x2, y2) {
+      const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+      line.setAttribute('x1',x1); line.setAttribute('y1',y1);
+      line.setAttribute('x2',x2); line.setAttribute('y2',y2);
+      line.setAttribute('stroke','#ff5900');
+      line.setAttribute('stroke-width','2');
+      line.setAttribute('stroke-dasharray','6 3');
+      line.setAttribute('marker-end','url(#arrow_sgSvg)');
+      svg.appendChild(line);
+    }
+
+    const d = pos(desktop), b = pos(bubble);
+
+    // Strzałka 1: +3cm+2cm=5cm(190px) od lewej, połowa długości
+    const a1x = b.left + 190;
+    const fullDist = d.top - b.top;
+    const a1yEnd = b.top + fullDist * 0.125; // 1/8 = połowa z poprzednich 1/4
+
+    // Strzałka 2: środek bloczka, -10cm (380px) krótsza + 1cm wyższa
+    const a2x = b.left + b.width * 0.5;
+    const a2yEnd = d.top + 190 + 380 - 38;
+
+    // Strzałka 3: prawa strona -3cm(114px), -40cm+10cm=-30cm krótsza
+    const a3x = b.left + b.width - 114;
+    const a3yEnd = d.top - 38 + 1520 - 380;
+
+    drawArrow(a1x, b.top, a1x, a1yEnd);
+    drawArrow(a2x, b.top, a2x, a2yEnd - 8);
+    drawArrow(a3x, b.top, a3x, a3yEnd);
+  })();
+
+  // ---- Detal: 2 strzałki z korektami ----
+  (function() {
+    const svg    = document.getElementById('dtSvg');
+    const layout = document.getElementById('dtOuterLayout');
+    const mobile = document.getElementById('dtMobile');
+    const desktop= document.getElementById('dtDesktop');
+    const bubble = document.getElementById('dtBubble');
+    if (!svg || !layout || !mobile || !desktop || !bubble) return;
+
+    svg.innerHTML = '';
+    const defs = document.createElementNS('http://www.w3.org/2000/svg','defs');
+    defs.innerHTML = `<marker id="arrow_dtSvg" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#ff5900"/>
+    </marker>`;
+    svg.appendChild(defs);
+
+    const lr = layout.getBoundingClientRect();
+    function pos(el) {
+      const r = el.getBoundingClientRect();
+      return { left: r.left-lr.left, top: r.top-lr.top, width: r.width, height: r.height };
+    }
+    function drawArrow(x1, y1, x2, y2) {
+      const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+      line.setAttribute('x1',x1); line.setAttribute('y1',y1);
+      line.setAttribute('x2',x2); line.setAttribute('y2',y2);
+      line.setAttribute('stroke','#ff5900');
+      line.setAttribute('stroke-width','2');
+      line.setAttribute('stroke-dasharray','6 3');
+      line.setAttribute('marker-end','url(#arrow_dtSvg)');
+      svg.appendChild(line);
+    }
+
+    const m = pos(mobile), d = pos(desktop), b = pos(bubble);
+
+    // Strzałka 1 (lewa/mobile): +2cm(76px) w prawo, połowa długości
+    const a1x = m.left + m.width * 0.2597 + 76;
+    const a1FullDist = m.top + m.height * 0.7445 - b.top;
+    const a1yEnd = b.top + a1FullDist * 0.5;
+    drawArrow(a1x, b.top, a1x, a1yEnd - 8);
+
+    // Strzałka 2 (desktop): -10cm(380px) krótsza
+    const a2x = d.left + d.width * 0.5076;
+    const a2yTarget = d.top + d.height * 0.5593;
+    const a2yEnd = a2yTarget + 380;
+    drawArrow(a2x, b.top, a2x, a2yEnd - 8);
+
+    // Strzałka 3: 2cm(76px) od prawej krawędzi bloczka, o 20cm(760px) dłuższa niż strzałka 2
+    const a3x = b.left + b.width - 76;
+    const a3yEnd = a2yEnd - 760 + 304 - 38;
+    drawArrow(a3x, b.top, a3x, a3yEnd - 8);
+  })();
+}
+
+window.addEventListener('load',   () => setTimeout(drawAllSiatkaArrows, 120));
+window.addEventListener('resize', drawAllSiatkaArrows);
+
+// ---- ARROWS for Belka dolna + Bramka + Czytasz sections ----
+function drawBdArrows() {
+  const svg = document.getElementById('bdSvg');
+  const layout = document.getElementById('bdOuterLayout');
+  if (!svg || !layout) return;
+
+  const ids = [
+    ['bdMobile1', 'bdDesktop1', 'bdBubble1', 0.0319, 0.9062, 0.0556, 0.9262],
+    ['bdMobile2', 'bdDesktop2', 'bdBubble2', 0.0319, 0.7175, 0.0418, 0.8004],
+  ];
+
+  svg.innerHTML = '';
+  const defs = document.createElementNS('http://www.w3.org/2000/svg','defs');
+  defs.innerHTML = `<marker id="arrowGreenBd" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+    <path d="M0,0 L0,8 L8,4 z" fill="#ff5900"/>
+  </marker>`;
+  svg.appendChild(defs);
+
+  const lr = layout.getBoundingClientRect();
+
+  function rel(id) {
+    const el = document.getElementById(id);
+    if (!el) return null;
+    const r = el.getBoundingClientRect();
+    return { left: r.left - lr.left, top: r.top - lr.top, width: r.width, height: r.height };
+  }
+
+  function drawArrow(x1, y1, x2, y2) {
+    const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('x1', x1); line.setAttribute('y1', y1);
+    line.setAttribute('x2', x2); line.setAttribute('y2', y2);
+    line.setAttribute('stroke','#ff5900');
+    line.setAttribute('stroke-width','2');
+    line.setAttribute('stroke-dasharray','6 3');
+    line.setAttribute('marker-end','url(#arrowGreenBd)');
+    svg.appendChild(line);
+  }
+
+  const offsets = [
+    [0, -19, -38, 57],
+    [0,  11, -19, 19],
+  ];
+
+  ids.forEach(([mId, dId, bId, mPctX, mPctY, dPctX, dPctY], i) => {
+    const m = rel(mId), d = rel(dId), b = rel(bId);
+    if (!m || !d || !b) return;
+    const [mOx, mOy, dOx, dOy] = offsets[i];
+    const mDotX = m.left + m.width  * mPctX + mOx;
+    const mDotY = m.top  + m.height * mPctY + mOy;
+    const dDotX = d.left + d.width  * dPctX + dOx;
+    const dDotY = d.top  + d.height * dPctY + dOy;
+    drawArrow(mDotX, b.top, mDotX, mDotY - 8);
+    drawArrow(dDotX, b.top, dDotX, dDotY - 8);
+  });
+}
+
+window.addEventListener('load',   () => setTimeout(drawBdArrows, 120));
+window.addEventListener('resize', drawBdArrows);
+
+// ---- ARROWS for Top belka + Baner sections ----
+function drawTbArrows() {
+  const svg     = document.getElementById('tbSvg');
+  const layout  = document.getElementById('tbOuterLayout');
+  const mobile1 = document.getElementById('tbMobile');
+  const desktop1= document.getElementById('tbDesktop');
+  const bubble1 = document.getElementById('tbBubble1');
+  const mobile2 = document.getElementById('obMobile');
+  const desktop2= document.getElementById('obDesktop');
+  const bubble2 = document.getElementById('obBubble1');
+  if (!svg || !layout || !mobile1 || !desktop1 || !bubble1 || !mobile2 || !desktop2 || !bubble2) return;
+
+  svg.innerHTML = '';
+  const lr = layout.getBoundingClientRect();
+
+  // ensure arrowhead marker exists
+  const defs = document.createElementNS('http://www.w3.org/2000/svg','defs');
+  defs.innerHTML = `<marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+    <path d="M0,0 L0,8 L8,4 z" fill="#ff5900"/>
+  </marker>`;
+  svg.appendChild(defs);
+
+  function rel(el) {
+    const r = el.getBoundingClientRect();
+    return {
+      left:   r.left   - lr.left,
+      top:    r.top    - lr.top,
+      width:  r.width,
+      height: r.height
+    };
+  }
+
+  function drawArrow(x1, y1, x2, y2) {
+    const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('x1', x1); line.setAttribute('y1', y1);
+    line.setAttribute('x2', x2); line.setAttribute('y2', y2);
+    line.setAttribute('stroke','#ff5900');
+    line.setAttribute('stroke-width','2');
+    line.setAttribute('stroke-dasharray','6 3');
+    line.setAttribute('marker-end','url(#arrowGreen)');
+    svg.appendChild(line);
+  }
+
+  // Green dot positions as % of each image:
+  // allegromobiletop: (4.44%, 7.90%)
+  // allegrotop:       (5.56%, 3.11%)
+  // allegroundertop:  (3.19%, 53.62%)
+  // allegrounderonb:  (10.86%, 79.07%)
+
+  const m1 = rel(mobile1);
+  const d1 = rel(desktop1);
+  const b1 = rel(bubble1);
+  const m2 = rel(mobile2);
+  const d2 = rel(desktop2);
+  const b2 = rel(bubble2);
+
+  // Bubble1 top → mobile1 green dot (straight up)
+  const m1DotX = m1.left + m1.width  * 0.0444;
+  const m1DotY = m1.top  + m1.height * 0.0790;
+  drawArrow(m1DotX, b1.top, m1DotX, m1DotY - 8);
+
+  // Bubble1 top → desktop1 green dot: -19px X, +19px Y
+  const d1DotX = d1.left + d1.width  * 0.0556 - 19;
+  const d1DotY = d1.top  + d1.height * 0.0311 + 19;
+  drawArrow(d1DotX, b1.top, d1DotX, d1DotY - 8);
+
+  // Bubble2 top → mobile2 green dot: +38px Y
+  const m2DotX = m2.left + m2.width  * 0.0319;
+  const m2DotY = m2.top  + m2.height * 0.5362 + 38;
+  drawArrow(m2DotX, b2.top, m2DotX, m2DotY - 8);
+
+  // Bubble2 top → desktop2 green dot: +38px Y
+  const d2DotX = d2.left + d2.width  * 0.1086;
+  const d2DotY = d2.top  + d2.height * 0.7907 + 38;
+  drawArrow(d2DotX, b2.top, d2DotX, d2DotY - 8);
+}
 
 window.addEventListener('load',   () => setTimeout(drawTbArrows, 120));
 window.addEventListener('resize', drawTbArrows);
+
+// ---- ARROWS for Czytasz dzięki section ----
+function drawCzArrows() {
+  const svg    = document.getElementById('czSvg');
+  const layout = document.getElementById('czOuterLayout');
+  const mobile = document.getElementById('czMobile');
+  const desktop= document.getElementById('czDesktop');
+  const bubble = document.getElementById('czBubble');
+  if (!svg || !layout || !mobile || !desktop || !bubble) return;
+
+  svg.innerHTML = '';
+  const defs = document.createElementNS('http://www.w3.org/2000/svg','defs');
+  defs.innerHTML = `<marker id="arrowGreenCz" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+    <path d="M0,0 L0,8 L8,4 z" fill="#ff5900"/>
+  </marker>`;
+  svg.appendChild(defs);
+
+  const lr = layout.getBoundingClientRect();
+  function pos(el) {
+    const r = el.getBoundingClientRect();
+    return { left: r.left - lr.left, top: r.top - lr.top, width: r.width, height: r.height };
+  }
+  function drawArrow(x1, y1, x2, y2) {
+    const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('x1', x1); line.setAttribute('y1', y1);
+    line.setAttribute('x2', x2); line.setAttribute('y2', y2);
+    line.setAttribute('stroke','#ff5900');
+    line.setAttribute('stroke-width','2');
+    line.setAttribute('stroke-dasharray','6 3');
+    line.setAttribute('marker-end','url(#arrowGreenCz)');
+    svg.appendChild(line);
+  }
+
+  const m = pos(mobile), d = pos(desktop), b = pos(bubble);
+  const mDotX = m.left + m.width  * 0.0319;
+  const mDotY = m.top  + m.height * 0.5925 + 19;
+  const dDotX = d.left + d.width  * 0.1128;
+  const dDotY = d.top  + d.height * 0.5738 + 19;
+
+  drawArrow(mDotX, b.top, mDotX, mDotY - 8);
+  drawArrow(dDotX, b.top, dDotX, dDotY - 8);
+}
+
+window.addEventListener('load',   () => setTimeout(drawCzArrows, 120));
+window.addEventListener('resize', drawCzArrows);
 
 function switchBA(variant, btn) {
   document.querySelectorAll('.slide-before-after .ba-toggle .ba-tab').forEach(t => t.classList.remove('ba-tab-active'));
